@@ -1,0 +1,103 @@
+body{
+    background: url('images/bg.jpg');
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+
+.header{ 
+    background-color: rgb(218 207 212);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: -7px;
+    margin-left: -13px;
+    margin-right: -10px;
+    font-size: 40px;
+    border: 4px solid black;
+    width: 101%;
+    height: 65px;
+    background-color: #f2f2f2;
+    
+ }
+
+ .calculator-grid {
+  margin-top: 49px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  /*min-height: 100vh;*/
+  grid-template-columns: repeat(5, 126px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 94px);
+    
+  }
+
+  .calculator-grid > button {
+
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid black;
+    outline: none;
+    background-color: rbga(255, 255, 255, 0.75);
+  }
+
+    .calculator-grid > button:hover {
+      background-color: #a9a9a9;
+    }
+
+    .span-two {
+      font-weight: bold;
+      font-size:15px;
+      grid-column: span 2;
+      color: red;
+      background-color: rgba(19, 26, 218, 0.8);
+    }
+/*background-color: lightblue;*/
+
+    .output{
+      border: 4px solid black;
+      border-bottom:  1px solid black;
+      grid-column: 1 / -1;
+      background-color: rgba(119, 95, 224, 0.75);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      flex-direction: column;
+      padding: 10px;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+
+    .output .previous-operand{
+      color: rgba(255,255, 255, 0.75);
+      font-size: 1.5rem;
+    }
+
+    .output .current-operand{
+      color: white;
+      font-size: 2.5rem;
+    }
+.footer {
+    background-color: rgb(218 207 212);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 77px;
+    margin-left: -13px;
+    margin-right: -10px;
+    font-size: 27px;
+    border-top: 4px solid black;
+    position: fixed;
+    bottom: 0;
+    width: 101%;
+    height: 45px; /* Adjust the height of the footer as needed */
+    background-color: #f2f2f2;
+    z-index: 2;
+    
+  }
